@@ -1,0 +1,48 @@
+{
+    "name": "Docsmore",
+    "description": "FORM.FILL.SIGN - With Docsmore, the process of setting up a form and sending to users to complete or sign is simplified.  Use our platform to easily upload a document, specify form fields\/signage, and send to users for completion.  Present forms to you...",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28946-api-docsmore-com.jpg",
+    "tags": [
+        "documents",
+        "have api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/docsmore\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Docsmore API 2.1",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28946-api-docsmore-com.jpg",
+            "humanURL": "http:\/\/api.docsmore.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/docsmore-api-2-1.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/docsmore-api-2-1-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Email",
+            "url": "contact@docsmore.com"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/docsmore"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/api.docsmore.com"
+        }
+    ]
+}
