@@ -1,0 +1,456 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0",
+        "title": "Docsmore API 2.1",
+        "description": "![alt text](https:\/\/www.docsmore.com\/wp-content\/uploads\/2018\/02\/docsmore-api.png \"Title\")\n\n\n<h3>Create a developer account at docsmore.io and start unleashing the power of Docsmore into your own applications. To make it easier, we have provided client libraries and SDK in several languages for you to get started and hit the ground running in no time.\n<\/h3>\n<br><br>\n<h4>Note: If you don't see API Setting under top right menu, that means you will need to be a developer account. Please contact support@docsmore.com and a customer service expert will switch your account to developer account. <\/h4>\n<br><br>\n<h5>\nJust head over to https:\/\/docsmore.io and sign up for your 30 days trial.\n<\/h5>",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.docsmore.com\/"
+    ],
+    "paths": {
+        "\/api\/getwebhooks": {
+            "get": {
+                "summary": "List all Webhooks",
+                "description": "List Webhooks that are both active and inactive. Inactive webhooks with webhook type of 'static' will be automatically removed during the nightly job process.",
+                "operationId": "ApiGetwebhooksGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/getwebhooks\/{id}": {
+            "get": {
+                "summary": "Get Details of Single Webhook",
+                "description": "Details of Single Webhook.",
+                "operationId": "ApiGetwebhooksByIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/webhook\/subscribe": {
+            "post": {
+                "summary": "Subscribe To Webhook",
+                "description": "Make sure you have a unique payload URL every time you use this api call to register your webhook. Unable to do so will result in webhook registration denial.\n\n\nFor multiple events subscription, just use it comma separated values. Here are the available list of register events.\n\n\n\ndocumentUploadComplete\nworkflowProgressEvent\nworkflowCompleteEvent\ndocumentflowProgressEvent\ndocumentflowCompleteEvent\ndocumentSelfSigninCompleteEvent",
+                "operationId": "ApiWebhookSubscribePost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/webhook\/unsubscribe\/{id}": {
+            "delete": {
+                "summary": "Unsubscribe Webhook",
+                "description": "It is important that you call this event to unsubscribe otherwise it will automatically be removed in 10 minutes. If not unsubscribed manually, it can also lead to the problem of duplication and create further issues.",
+                "operationId": "ApiWebhookUnsubscribeByIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/oauth\/token": {
+            "post": {
+                "summary": "Get OAuth TOKEN",
+                "description": "Obtaining an Auth Token is the first thing in the process. The lifetime of Auth token is configurable in the developer portal depending upon your need. Once auth token is obtained, all the follow up API calls will need to include auth token in the header. FaIlure to do so would result in response with 401 Unauthorized Access.\n\nUnder Your Developer Account - Go to Api Setting and you will screen similar to below.\n\n\nMake sure you call this in server side code. Exposing apiKey and clientSecret is a",
+                "operationId": "OauthTokenPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/dmcatalogue": {
+            "post": {
+                "summary": "Fetch All Documents from Your Team Catalogue",
+                "description": "By design, the authenticated user can only view the files that are either created by them or shared with them. Make sure user has at least read permission to view the catalogue.",
+                "operationId": "ApiDmcataloguePost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "items",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/dmcatalogue\/:id": {
+            "post": {
+                "summary": "Fetch Single Document",
+                "description": "Fetch single document.",
+                "operationId": "ApiDmcatalogueIdPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/docflow\/getdocflows": {
+            "get": {
+                "summary": "Get All Document Flows",
+                "description": "Get all document flows.",
+                "operationId": "ApiDocflowGetdocflowsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/clientdocs\/getrawdata\/:authToken\/:documentKey": {
+            "get": {
+                "summary": "Get Raw Data For A Given Document",
+                "description": "This API call gets you underlying raw data of the document. All you need to do is supply Auth token and Document Key as part of the call.\n\nDocument Key can be obtained from \"Document Gallery\" Page and Clicking on the sub-menu of the desired document.\n\nAs a response object, jsondata and metadata information is passed. Jsondata is basically raw data and metadata is data columns information.",
+                "operationId": "ApiClientdocsGetrawdataAuthTokenDocumentKeyGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "authToken",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "documentKey",
+                        "in": "query",
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/getworkflowlink": {
+            "post": {
+                "summary": "Get Workflow Link",
+                "description": "This is the most popular use of Docsmore API. From your connected app, you can launch workflow and obtain the unique link for immediate launch or later on. You can also supply data in flat json format that can be used inside the document for pre-fill purpose saving your customer time.\n\nPlease make sure you pay close attention to the requirement for this API call as there are several aspects of it as required parameters.",
+                "operationId": "ApiGetworkflowlinkPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/docflowtracks\/flowtrackviaapi": {
+            "post": {
+                "summary": "Get Workflow Link For Flow Track",
+                "description": "In Docsmore space, Flow Track means all the client documents generated using one of the Document Flow. In other words, it is an instance of Document FLow. The other thing to notice here is payload information is remarkably similar to general \"Workflow\" of a Single Document.\n\nWhen you initiate this API call, you are basically setting up a new instance of Workflow and in turn getting workflow link of the starting document in the workflow.\n\nIf \"flowtrackid\" value is \"new\", then new flowtrack will b",
+                "operationId": "ApiDocflowtracksFlowtrackviaapiPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/rawdata": {
+            "post": {
+                "summary": "Returns raw data response as json FOR SINGLE CLIENT DOC",
+                "description": "This API call gets you underlying raw data of the document. All you need to do is supply Auth token and Document Key as part of the call",
+                "operationId": "RawdataPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "description": ""
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/getclientdocs": {
+            "post": {
+                "summary": "Get List of Client Documents By Document ID",
+                "description": "In order to export as PDf, you will need to have client document ID available for that specific document you are looking to download.",
+                "operationId": "GetclientdocsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/clientdocs\/exportpdf\/{id}": {
+            "get": {
+                "summary": "Export As PDF",
+                "description": "In order to export as PDf, you will need to have client document ID available for that specific document you are looking to download.",
+                "operationId": "ClientdocsExportpdfByIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Content",
+                        "in": "header",
+                        "description": ""
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "SubscribeToWebhookrequest": {
+                "type": "object",
+                "properties": {
+                    "payloadUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "registerEvents": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetOauthTokenrequest": {
+                "type": "object",
+                "properties": {
+                    "client_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "client_secret": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetWorkflowLinkrequest": {
+                "type": "object",
+                "properties": {
+                    "docId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "senderName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "senderEmail": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "participants": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "straightSubmit": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "uid": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Participant": {
+                "type": "object",
+                "properties": {
+                    "userFirstName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userLastName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userEmail": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PrefillData": {
+                "type": "object",
+                "properties": {
+                    "key1": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "key2": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetWorkflowLinkForFlowTrackrequest": {
+                "type": "object",
+                "properties": {
+                    "docflowId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "flowtrackid": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "senderName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "senderEmail": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "participants": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updateUri": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ReturnsRawDataResponseAsJsonForSingleClientDocrequest": {
+                "type": "object",
+                "properties": {
+                    "clientDocId": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
