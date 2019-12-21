@@ -1,5 +1,5 @@
 {
-    "id": "2788695b9e6164f4756c1c7dfeaa37d7",
+    "id": "832ee7fa262573376d7aa58507c3e021",
     "name": "Docsmore API 2.1",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "1e955f6445c811b58a744b67125b762d",
+            "id": "046ec05febcacbd27e1f63b97c809d9e",
             "name": "List all Webhooks",
             "url": "httpsapi.docsmore.com\/\/api\/getwebhooks",
             "description": "List Webhooks that are both active and inactive. Inactive webhooks with webhook type of 'static' will be automatically removed during the nightly job process.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "017694e7cfbb1abb2256a435180e8f95",
+            "id": "79972c1da7ce51a1c65741b7db193ceb",
             "name": "Get Details of Single Webhook",
             "url": "httpsapi.docsmore.com\/\/api\/getwebhooks\/{id}",
             "description": "Details of Single Webhook.",
@@ -75,11 +75,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "d57b7fc7fb3fad2a41dc2f1e58e0a4de",
+            "id": "552c510bf3fdf60fa5959c8080e59866",
             "name": "Subscribe To Webhook",
             "url": "httpsapi.docsmore.com\/\/api\/webhook\/subscribe",
             "description": "Make sure you have a unique payload URL every time you use this api call to register your webhook. Unable to do so will result in webhook registration denial.\n\n\nFor multiple events subscription, just use it comma separated values. Here are the available list of register events.\n\n\n\ndocumentUploadComplete\nworkflowProgressEvent\nworkflowCompleteEvent\ndocumentflowProgressEvent\ndocumentflowCompleteEvent\ndocumentSelfSigninCompleteEvent",
@@ -113,11 +113,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "facc66c4bbe3f6ce9811a8c9234a7ac5",
+            "id": "879fd1df4ae200428c9eb6876aba7c2e",
             "name": "Unsubscribe Webhook",
             "url": "httpsapi.docsmore.com\/\/api\/webhook\/unsubscribe\/{id}",
             "description": "It is important that you call this event to unsubscribe otherwise it will automatically be removed in 10 minutes. If not unsubscribed manually, it can also lead to the problem of duplication and create further issues.",
@@ -151,11 +151,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "af029bd4534245eab68cb3a807fff44c",
+            "id": "a0a414c47722bcf19012c7345c409d3b",
             "name": "Get OAuth TOKEN",
             "url": "httpsapi.docsmore.com\/\/oauth\/token",
             "description": "Obtaining an Auth Token is the first thing in the process. The lifetime of Auth token is configurable in the developer portal depending upon your need. Once auth token is obtained, all the follow up API calls will need to include auth token in the header. FaIlure to do so would result in response with 401 Unauthorized Access.\n\nUnder Your Developer Account - Go to Api Setting and you will screen similar to below.\n\n\nMake sure you call this in server side code. Exposing apiKey and clientSecret is a",
@@ -196,11 +196,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "efaf67f99fab9d3b71a557dd9b095606",
+            "id": "45a1479ccfab9def4aa084ed31854c66",
             "name": "Fetch All Documents from Your Team Catalogue",
             "url": "httpsapi.docsmore.com\/\/api\/dmcatalogue",
             "description": "By design, the authenticated user can only view the files that are either created by them or shared with them. Make sure user has at least read permission to view the catalogue.",
@@ -248,11 +248,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "97900375536cabbc363818d60ef49b4b",
+            "id": "3544f61204a3060fd8a59e5b45cd0165",
             "name": "Fetch Single Document",
             "url": "httpsapi.docsmore.com\/\/api\/dmcatalogue\/:id",
             "description": "Fetch single document.",
@@ -293,11 +293,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "481107693d14a2072e1a2e7203230c6f",
+            "id": "b2119248fdbc581a4cdeab25dd7441ad",
             "name": "Get All Document Flows",
             "url": "httpsapi.docsmore.com\/\/api\/docflow\/getdocflows",
             "description": "Get all document flows.",
@@ -331,11 +331,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "7b4584b6143804a7e4d081664a63dba2",
+            "id": "ba1f41532e229887b2ec9cbfe175d9a2",
             "name": "Get Raw Data For A Given Document",
             "url": "httpsapi.docsmore.com\/\/api\/clientdocs\/getrawdata\/:authToken\/:documentKey",
             "description": "This API call gets you underlying raw data of the document. All you need to do is supply Auth token and Document Key as part of the call.\n\nDocument Key can be obtained from \"Document Gallery\" Page and Clicking on the sub-menu of the desired document.\n\nAs a response object, jsondata and metadata information is passed. Jsondata is basically raw data and metadata is data columns information.",
@@ -383,11 +383,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "4a80b2af03f519a26e9520749aa5e585",
+            "id": "0013c8987f895dca10fb7eee5bb9c716",
             "name": "Get Workflow Link",
             "url": "httpsapi.docsmore.com\/\/api\/getworkflowlink",
             "description": "This is the most popular use of Docsmore API. From your connected app, you can launch workflow and obtain the unique link for immediate launch or later on. You can also supply data in flat json format that can be used inside the document for pre-fill purpose saving your customer time.\n\nPlease make sure you pay close attention to the requirement for this API call as there are several aspects of it as required parameters.",
@@ -428,11 +428,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "96255e83e97cabec0edefc30ae4dd60d",
+            "id": "3508790d4649c3570d59b9b7017fcd44",
             "name": "Get Workflow Link For Flow Track",
             "url": "httpsapi.docsmore.com\/\/api\/docflowtracks\/flowtrackviaapi",
             "description": "In Docsmore space, Flow Track means all the client documents generated using one of the Document Flow. In other words, it is an instance of Document FLow. The other thing to notice here is payload information is remarkably similar to general \"Workflow\" of a Single Document.\n\nWhen you initiate this API call, you are basically setting up a new instance of Workflow and in turn getting workflow link of the starting document in the workflow.\n\nIf \"flowtrackid\" value is \"new\", then new flowtrack will b",
@@ -473,11 +473,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "1310d3a086eadb06fca3bc5fe7a3dbad",
+            "id": "47198830ddf858e86fdb006e2a646a95",
             "name": "Returns raw data response as json FOR SINGLE CLIENT DOC",
             "url": "httpsapi.docsmore.com\/\/rawdata",
             "description": "This API call gets you underlying raw data of the document. All you need to do is supply Auth token and Document Key as part of the call",
@@ -518,11 +518,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "a8b107938ffeaebb9fea3abe011166c5",
+            "id": "a76096e46c9d8a9e8197ee968498d7bd",
             "name": "Get List of Client Documents By Document ID",
             "url": "httpsapi.docsmore.com\/\/getclientdocs",
             "description": "In order to export as PDf, you will need to have client document ID available for that specific document you are looking to download.",
@@ -549,11 +549,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         },
         {
-            "id": "84719f959d2b9f7e5c15c5f1372e31a9",
+            "id": "ccddaa032b51399990cf5ecaf5d38b90",
             "name": "Export As PDF",
             "url": "httpsapi.docsmore.com\/\/clientdocs\/exportpdf\/{id}",
             "description": "In order to export as PDf, you will need to have client document ID available for that specific document you are looking to download.",
@@ -587,7 +587,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2788695b9e6164f4756c1c7dfeaa37d7",
+            "collectionId": "832ee7fa262573376d7aa58507c3e021",
             "rawModeData": ""
         }
     ]
